@@ -1,0 +1,61 @@
+.landing{
+  margin: auto;
+  text-align: center;
+}
+.landingImg{
+  width: 5vh;
+  margin: 5vw;
+  margin-top: 15vh;
+  cursor: pointer;
+}
+.landing button{
+  margin: auto;
+  margin-top: 15vh;
+  height: 7.5vh;
+  width: 35vw;
+  border-radius: 15px;
+  background-color: #5E8B92;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  font-size: 3vh;
+  font-family: 'Nova Mono';
+}
+.lock{
+  margin: auto;
+  margin-top: 20vh;
+  text-align: left;
+}
+.Maina{
+  width: 10vw;
+  margin: 7.5vh 10vw 10vw 10vw;
+}
+.landing h1{
+  color: #5E8B92;
+  font-size: 5vh;
+}
+.landing p{
+  color: #fff;
+  width: 75vw;
+  margin-left: 10vw;
+  margin-top: 10vh;
+}
+hr{
+  margin: 10vh;
+  border: solid 1px #5E8B92;
+}
+.clock{
+  margin: auto;
+  margin-top: 20vh;
+  text-align: right;
+}
+.speed{
+  margin: auto;
+  margin-top: 20vh;
+  text-align: left;
+}
+.freedom{
+  margin: auto;
+  margin-top: 20vh;
+  text-align: right;
+}

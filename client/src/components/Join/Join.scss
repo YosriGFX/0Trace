@@ -1,0 +1,188 @@
+@font-face {
+  font-family: 'Nova Mono';
+  font-style: normal;
+  src: url('NovaMono.ttf');
+}
+#root{
+  z-index: 999;
+}
+body {
+  font-family: "Nova Mono";
+  background-color: #21252A;
+}
+.mainer {
+  z-index: -1;
+}
+.bg-image {
+  background-image: url('https://images6.alphacoders.com/459/459032.jpg');
+  background-size: contain;
+  filter: blur(4px);
+  opacity: 0.25;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-position: center;
+  z-index: -999;
+}
+.containerG {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.glitch {
+  color: rgba(20, 42, 62, 0.5);
+  font-size: 15vh;
+  animation: glitch 5s 5s infinite;
+}
+
+.glitch1 {
+  color: rgba(17, 100, 110, 0.8);
+  text-shadow: -5px 0 #fff;
+  overflow: hidden;
+  margin-top: -21vh;
+  font-size: 15vh;
+  animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+}
+
+.glitch2 {
+  font-size: 9vw;
+  text-shadow: -5px 0 #2E769A;
+  margin-top: -42vh;
+  font-size: 15vh;
+  overflow: hidden;
+  animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+}
+
+@keyframes glitch {
+  1%{
+    transform: rotateX(10deg) skewX(90deg);
+  }
+  2%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
+@keyframes noise-1 {
+  $steps: 30;
+  @for $i from 1 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+@keyframes noise-2 {
+  $steps: 30;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+.scanlines {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -999;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) .5%,
+    transparent 1%
+  );
+
+  animation: fudge 7s ease-in-out alternate infinite;
+}
+
+
+@keyframes fudge {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(0px, 2%);
+  }
+}
+
+.glow {
+  @extend .glitch;
+  text-shadow: 0 0 1000px rgb(223, 191, 191);
+  color: transparent;
+  top: 0;
+}
+
+
+@keyframes glitch-2 {
+  1%{
+    transform: rotateX(10deg) skewX(70deg);
+  }
+  2%{
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
+
+.loginForm{
+  background-color: rgba(17, 114, 199, 0.2);
+  padding: 25px;
+  text-align: center;
+  margin: auto;
+  height: 100%;
+}
+.loginForm h1{
+  font-size: 5vh;
+  color: #fff;
+}
+.loginForm input{
+  text-align: center;
+  margin-top: 5vh;
+  height: 5vh;
+  width: 15vw;
+  border-radius: 15px;
+  background-color: #fff;
+  text-decoration: none;
+  border: none;
+  color: #5E8B92;
+  font-size: 3vh;
+  font-family: 'Nova Mono';
+  padding: 2vh;
+}
+.loginForm button{
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  height: 7.5vh;
+  width: 15vw;
+  border-radius: 15px;
+  background-color: #5E8B92;
+  text-decoration: none;
+  border: none;
+  color: #fff;
+  font-size: 3vh;
+  font-family: 'Nova Mono';
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .loginForm {
+    width: 100%;
+    padding: 25px 0px 25px 0px;
+    margin-left: 7.5%;
+  }
+  .loginForm input{
+    width: 50vw;
+  }
+  .loginForm button{
+    width: 50vw;
+  }
+}
+@media (min-width: 480px){
+  .loginForm {
+    width: 60%;
+  }
+}
